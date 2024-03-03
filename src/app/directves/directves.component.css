@@ -1,0 +1,15 @@
+.div {
+      background-color: rgb(118, 96, 137);
+      color: rgb(16, 11, 4);
+      padding: 50px;
+      margin: 10px;
+      border-radius: 20px;
+}
+
+.div2 {
+      background-color: rgb(52, 138, 123);
+      color: rgb(16, 11, 4);
+      padding: 50px;
+      margin: 10px;
+      border-radius: 20px;
+}

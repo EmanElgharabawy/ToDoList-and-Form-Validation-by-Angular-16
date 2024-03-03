@@ -1,0 +1,43 @@
+<button class="btn btn-success" (click)="changestate()">Toggle</button>
+
+<div [class.div]="isapplayed" *ngIf="isAccepted ; else OurElse">
+      <h1>Welcome to Directives</h1>
+      <p>Lorem ipsum dolor sit amet.!</p>
+</div>
+
+<ng-template #OurElse>
+      <div [class.div2]="isapplayed">
+            <h1>Sorry try Again Later</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, velit.</p>
+      </div>
+</ng-template>
+<br>
+<br>
+<br>
+
+<div class="card" style="width: 18rem;" *ngFor="let type of FlowersTypes ; let i = index ">
+      <img [src]="srcimage[i]" class="card-img-top">
+      <div class="card-body">
+            <h5 class="card-title">{{type}}</h5>
+            <p class="card-text">FlowersFlowersFlowersFlowersFlowers
+                  content.</p>
+            <a href="#" class="btn btn-primary">Show Details</a>
+      </div>
+</div>
+
+<select [(ngModel)]="track">
+      <option>Dot Net</option>
+      <option>PHP</option>
+      <option>MEARN</option>
+      <option>PYTHON</option>
+      <option>AI</option>
+</select>
+
+<h1>Welcome To ITI Tracks</h1>
+<div [ngSwitch]="track">
+      <p *ngSwitchCase="'dotnet'">Dot Net</p>
+      <p *ngSwitchCase="'PHP'">PHP</p>
+      <p *ngSwitchCase="'MEARN'">MEARN</p>
+      <p *ngSwitchCase="'AI'">AI</p>
+      <p *ngSwitchCase="'PYTHON'">PYTHON</p>
+</div>
